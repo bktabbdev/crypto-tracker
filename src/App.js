@@ -1,9 +1,9 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from './GlobalStyle';
 
-import Header from "./components/header/header/header.component";
-import HomePage from "./pages/HomePage/HomePage.component";
+import Header from './components/header/header.component';
+import HomePage from './pages/HomePage/HomePage.component';
 
 function App() {
   return (

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { NavContainer, Span } from "./header.styles";
+import { NavContainer, Span } from './header.styles';
 
 const Header = () => {
   return (

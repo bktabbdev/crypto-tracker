@@ -1,3 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import "./card-container.styles";
+import { Div } from './card-container.styles';
+
+import CryptoCard from '../crypto-card/crypto-card.component';
+
+const CardContainer = ({ store, numToRender }) => {
+  console.log(store, numToRender);
+  return (
+    <Div props>
+      {store.map(({ id, ...otherProps }) => {
+        return <CryptoCard key={id} {...otherProps} />;
+      })}
+    </Div>
+  );
+};
+
+export default CardContainer;
