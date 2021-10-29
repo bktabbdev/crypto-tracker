@@ -6,19 +6,18 @@ export const Div = styled.div`
   border: 3px solid black;
   margin: 2rem;
   display: grid;
-  grid-template-rows: 75px 150px 225px;
-  grid-gap: 0.5rem;
+  grid-template-rows: 150px 300px;
 
   .crypto-title {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     font-size: 64px;
+    position: relative;
+    border-bottom: 2px solid blue;
 
     &:first-child {
-      margin: 0 auto;
-      text-align: center;
       color: blue;
     }
   }
@@ -26,29 +25,24 @@ export const Div = styled.div`
   .img-container {
     display: flex;
     justify-content: center;
-    position: relative;
-    z-index: 10;
-  }
-
-  .img-container:after {
-    content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: red;
-    z-index: 1;
+    top: 100px;
+    height: 87.5px;
+    width: 87.5px;
+    z-index: 10;
   }
 
   .crypto-image {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
     margin: 0 auto;
-    transform: translateY(50%);
     z-index: 10;
     background: #fff;
+  }
+
+  .crypto-data {
+    padding-top: 16px;
   }
 `;
 

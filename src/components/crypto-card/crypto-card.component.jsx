@@ -2,10 +2,8 @@ import React from 'react';
 
 import { Div } from './crypto-card.styles';
 
-import { ReactComponent as Logo } from './../../assets/crypto-logos/algo-logo.svg';
-
 const CryptoCard = (coinInfo) => {
-  let { name_id, name, imageUrl } = coinInfo;
+  let { name_id, name } = coinInfo;
 
   if (name.includes(' ')) {
     const newNameArray = name.split(' ');
@@ -24,15 +22,15 @@ const CryptoCard = (coinInfo) => {
     <Div>
       <div className="crypto-title">
         <div>{name_id.toUpperCase()} </div>
-      </div>
-      <div className="img-container">
-        <img
-          className="crypto-image"
-          src={
-            require(`./../../assets/crypto-logos/${name_id}-logo.svg`).default
-          }
-          alt=""
-        />
+        <div className="img-container">
+          <img
+            className="crypto-image"
+            src={
+              require(`./../../assets/crypto-logos/${name_id}-logo.svg`).default
+            }
+            alt=""
+          />
+        </div>
       </div>
 
       <div className="crypto-data">

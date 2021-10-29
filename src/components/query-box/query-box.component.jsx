@@ -1,9 +1,6 @@
 import { Input, Div } from './query-box.styles';
-import { useState } from 'react';
 
 const QueryBox = () => {
-  const [val, setVal] = useState(null);
-
   const handleChange = () => {
     console.log(this);
   };
