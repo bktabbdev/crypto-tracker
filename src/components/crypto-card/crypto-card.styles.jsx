@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const Div = styled.div`
   height: 450px;
-  width: 350px;
+  width: 300px;
   border: 3px solid black;
   margin: 2rem;
   display: grid;
   grid-template-rows: 150px 300px;
+  transform: scale(0.9);
 
   .crypto-title {
     display: flex;

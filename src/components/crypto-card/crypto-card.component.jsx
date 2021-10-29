@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 
 import axios from 'axios';
 
@@ -8,7 +8,7 @@ const CryptoCard = (coinInfo) => {
   let { name_id, name } = coinInfo;
 
   const [price, setPrice] = useState(0);
-  const [needsChange, setNeedsChange] = useState(true);
+  const [isLayout, setIsLayout] = useState(true);
 
   if (name.includes(' ')) {
     const newNameArray = name.split(' ');
@@ -23,9 +23,9 @@ const CryptoCard = (coinInfo) => {
     name = name[0].toUpperCase() + name.slice(1);
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (!isLayout) return;
     const fetchPriceData = async () => {
-      if (!needsChange) return;
       try {
         let priceData = await axios
           .get(
@@ -40,6 +40,7 @@ const CryptoCard = (coinInfo) => {
 
         // console.log(`priceData: `, priceData);
         setPrice(priceData.amount);
+        setIsLayout(false);
         console.log(price);
         // console.log(`${name_id} ---- ${curPrice}`);
       } catch (err) {
@@ -48,6 +49,35 @@ const CryptoCard = (coinInfo) => {
     };
 
     fetchPriceData();
+  });
+
+  useEffect(() => {
+    if (isLayout) return;
+    setInterval(() => {
+      const fetchPriceData = async () => {
+        try {
+          let priceData = await axios
+            .get(
+              `https://api.coinbase.com/v2/prices/${name_id.toUpperCase()}-USD/buy`
+            )
+            .then((data) => {
+              return data.data;
+            })
+            .then((data) => {
+              return data.data;
+            });
+
+          // console.log(`priceData: `, priceData);
+          setPrice(priceData.amount);
+          console.log(price);
+          // console.log(`${name_id} ---- ${curPrice}`);
+        } catch (err) {
+          console.log('ERROR: ', err);
+        }
+      };
+
+      fetchPriceData();
+    }, 10000);
   });
 
   return (
