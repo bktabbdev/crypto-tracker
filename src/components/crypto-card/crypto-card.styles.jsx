@@ -1,22 +1,23 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
-  height: 450px;
-  width: 300px;
-  border: 3px solid black;
+  height: 405px;
+  width: 270px;
   margin: 2rem;
   display: grid;
-  grid-template-rows: 150px 300px;
-  transform: scale(0.9);
+  grid-template-rows: 135px 264px;
+  border-radius: 10px;
 
   .crypto-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    font-size: 64px;
+    font-size: 48px;
     position: relative;
     border-bottom: 2px solid blue;
+    background: #a7cfe8;
+    border-radius: 10px 10px 0 0;
 
     &:first-child {
       color: blue;
@@ -27,9 +28,9 @@ export const Div = styled.div`
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 100px;
-    height: 87.5px;
-    width: 87.5px;
+    top: 90px;
+    height: 78.75px;
+    width: 78.75px;
     z-index: 10;
   }
 
@@ -44,9 +45,12 @@ export const Div = styled.div`
 
   .crypto-data {
     padding-top: 16px;
+    padding-left: 16px;
+    background: #a284ad;
+    border-radius: 0 0 10px 10px;
 
     .price {
-      color: #38c773;
+      color: #d4395d;
     }
   }
 `;

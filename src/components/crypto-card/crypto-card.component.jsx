@@ -32,16 +32,14 @@ const CryptoCard = (coinInfo) => {
             `https://api.coinbase.com/v2/prices/${name_id.toUpperCase()}-USD/buy`
           )
           .then((data) => {
+            console.log(data);
             return data.data;
           })
           .then((data) => {
             return data.data;
           });
-
-        // console.log(`priceData: `, priceData);
         setPrice(priceData.amount);
         setIsLayout(false);
-        console.log(price);
         // console.log(`${name_id} ---- ${curPrice}`);
       } catch (err) {
         console.log('ERROR: ', err);
@@ -51,34 +49,34 @@ const CryptoCard = (coinInfo) => {
     fetchPriceData();
   });
 
-  useEffect(() => {
-    if (isLayout) return;
-    setInterval(() => {
-      const fetchPriceData = async () => {
-        try {
-          let priceData = await axios
-            .get(
-              `https://api.coinbase.com/v2/prices/${name_id.toUpperCase()}-USD/buy`
-            )
-            .then((data) => {
-              return data.data;
-            })
-            .then((data) => {
-              return data.data;
-            });
+  // useEffect(() => {
+  //   if (isLayout) return;
+  //   setInterval(() => {
+  //     const fetchPriceData = async () => {
+  //       try {
+  //         let priceData = await axios
+  //           .get(
+  //             `https://api.coinbase.com/v2/prices/${name_id.toUpperCase()}-USD/buy`
+  //           )
+  //           .then((data) => {
+  //             return data.data;
+  //           })
+  //           .then((data) => {
+  //             return data.data;
+  //           });
 
-          // console.log(`priceData: `, priceData);
-          setPrice(priceData.amount);
-          console.log(price);
-          // console.log(`${name_id} ---- ${curPrice}`);
-        } catch (err) {
-          console.log('ERROR: ', err);
-        }
-      };
+  //         // console.log(`priceData: `, priceData);
+  //         setPrice(priceData.amount);
+  //         console.log(price);
+  //         // console.log(`${name_id} ---- ${curPrice}`);
+  //       } catch (err) {
+  //         console.log('ERROR: ', err);
+  //       }
+  //     };
 
-      fetchPriceData();
-    }, 10000);
-  });
+  //     fetchPriceData();
+  //   }, 10000);
+  // });
 
   return (
     <Div>

@@ -11,4 +11,5 @@ export const Div = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   overflow: scroll;
+  box-sizing: border-box;
 `;
