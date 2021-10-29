@@ -35,7 +35,7 @@ export const Div = styled.div`
   .crypto-image {
     width: 100%;
     height: 100%;
-    border: 1px solid black;
+    border: 1px solid blue;
     margin: 0 auto;
     z-index: 10;
     background: #fff;
@@ -43,6 +43,10 @@ export const Div = styled.div`
 
   .crypto-data {
     padding-top: 16px;
+
+    .price {
+      color: #38c773;
+    }
   }
 `;
 
