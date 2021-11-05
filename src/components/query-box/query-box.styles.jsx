@@ -7,6 +7,7 @@ export const Div = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: -12px;
 
   h1 {
     color: blue;

@@ -12,4 +12,8 @@ export const Div = styled.div`
   flex-wrap: wrap;
   overflow: scroll;
   box-sizing: border-box;
+
+  @media (max-width: 480px) {
+    margin-top: 48px;
+  }
 `;
