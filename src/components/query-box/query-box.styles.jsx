@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
-  &.query-container {
-    height: 144px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+  height: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
   h1 {
     color: blue;

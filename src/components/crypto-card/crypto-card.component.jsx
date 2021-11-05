@@ -79,7 +79,7 @@ const CryptoCard = (coinInfo) => {
   // });
 
   return (
-    <Div>
+    <Div className="crypto-card">
       <div className="crypto-title">
         <div>{name_id.toUpperCase()} </div>
         <div className="img-container">

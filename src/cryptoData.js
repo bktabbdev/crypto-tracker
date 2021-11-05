@@ -15,9 +15,9 @@ const CRYPTO_DATA = [
   },
   {
     id: '3',
-    name_id: 'bnb',
-    name: 'binance coin',
-    imageUrl: './assets/crypto-logos/bnb-logo.png',
+    name_id: 'lrc',
+    name: 'loopring',
+    imageUrl: './assets/crypto-logos/lrc-logo.png',
     scale: 1,
   },
   {
@@ -71,9 +71,9 @@ const CRYPTO_DATA = [
   },
   {
     id: '11',
-    name_id: 'xrp',
-    name: 'ripple',
-    imageUrl: './assets/crypto-logos/xrp-logo.png',
+    name_id: 'grt',
+    name: 'the graph',
+    imageUrl: './assets/crypto-logos/ship-logo.png',
     scale: 0.9,
   },
   {
