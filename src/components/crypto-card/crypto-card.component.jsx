@@ -32,7 +32,6 @@ const CryptoCard = (coinInfo) => {
             `https://api.coinbase.com/v2/prices/${name_id.toUpperCase()}-USD/buy`
           )
           .then((data) => {
-            console.log(data);
             return data.data;
           })
           .then((data) => {
