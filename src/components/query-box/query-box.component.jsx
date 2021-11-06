@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Input, Div, aToZ } from './query-box.styles';
+import { Input, Div } from './query-box.styles';
 import { AiOutlineSortAscending } from 'react-icons/ai';
 import styled from 'styled-components';
 
@@ -21,19 +21,24 @@ const QueryBox = () => {
 
   return (
     <Div className="query-container">
-      <h1>
-        Query <br /> For Data
-      </h1>
-      <Input
-        type="text"
-        name="query-input"
-        className="query-input"
-        placeholder="Enter a crypto or ticker"
-        onChange={handleChange}
-      />{' '}
-      <h2>Query: {query}</h2>
-      <div className="sort-container">
-        <IconSort />
+      <div className="query-item-one">
+        <h2>
+          Query <br /> For Data
+        </h2>
+        <Input
+          type="text"
+          name="query-input"
+          className="query-input query-item"
+          placeholder="Enter a crypto or ticker"
+          maxLength="12"
+          onChange={handleChange}
+        />{' '}
+      </div>
+      <div className="query-item-two">
+        <h2>Query: {query}</h2>
+        <div className="sort-container">
+          <IconSort className="sort-icon" />
+        </div>
       </div>
     </Div>
   );

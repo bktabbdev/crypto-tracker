@@ -8,19 +8,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .homepage {
-    transform: scale(0.8);
-  }
-
-  .homepage .query-container {
-    font-size: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transform: translateY(-50px);
-  }
-
   .homepage .card-container {
     width: 100%;
     box-shadow: none;

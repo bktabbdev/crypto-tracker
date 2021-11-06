@@ -4,7 +4,7 @@ export const NavContainer = styled.nav`
   background: rgba(18, 7, 77);
   width: 100%;
   display: flex;
-  height: 84px;
+  height: 96px;
   justify-content: center;
   flex-direction: column;
 
@@ -12,7 +12,8 @@ export const NavContainer = styled.nav`
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    height: 60px;
+    height: 72px;
+    overflow-x: hidden;
   }
 `;
 

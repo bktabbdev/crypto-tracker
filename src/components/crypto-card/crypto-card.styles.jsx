@@ -53,6 +53,10 @@ export const Div = styled.div`
       color: #d4395d;
     }
   }
+
+  @media (max-width: 480px) {
+    margin: 0;
+  }
 `;
 
 export const Svg = styled.svg`
