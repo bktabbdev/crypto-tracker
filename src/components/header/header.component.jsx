@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { NavContainer, NavLinkContainer, Span } from './header.styles';
+import MobileMenuModal from '../mobile-modal/menu-modal.component';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -13,6 +14,7 @@ const Header = () => {
   return (
     <NavContainer>
       <div className="empty-toggle" style={{ display: 'none' }}></div>
+      {open ? <MobileMenuModal /> : null}
 
       <Span>
         <h1>Crypto</h1>{' '}
@@ -38,7 +40,7 @@ const Header = () => {
               <AiOutlineClose className="icon" />
             ) : (
               <GiHamburgerMenu className="icon" />
-            )}
+            )}{' '}
           </button>
         </div>
       </NavLinkContainer>
