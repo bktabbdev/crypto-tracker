@@ -48,64 +48,11 @@ const CryptoCard = (coinInfo) => {
     fetchPriceData();
   });
 
-  // useEffect(() => {
-  //   if (isLayout) return;
-  //   setInterval(() => {
-  //     const fetchPriceData = async () => {
-  //       try {
-  //         let priceData = await axios
-  //           .get(
-  //             `https://api.coinbase.com/v2/prices/${name_id.toUpperCase()}-USD/buy`
-  //           )
-  //           .then((data) => {
-  //             return data.data;
-  //           })
-  //           .then((data) => {
-  //             return data.data;
-  //           });
-
-  //         // console.log(`priceData: `, priceData);
-  //         setPrice(priceData.amount);
-  //         console.log(price);
-  //         // console.log(`${name_id} ---- ${curPrice}`);
-  //       } catch (err) {
-  //         console.log('ERROR: ', err);
-  //       }
-  //     };
-
-  //     fetchPriceData();
-  //   }, 10000);
-  // });
-
   return (
     <Div className="crypto-card">
-      <div className="crypto-title">
-        <div>{name_id.toUpperCase()} </div>
-        <div className="img-container">
-          <img
-            className="crypto-image"
-            src={
-              require(`./../../assets/crypto-logos/${name_id}-logo.svg`).default
-            }
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div className="crypto-data">
-        <h2>{`Daily ${name} Credentials`}</h2>
-        <h2>
-          Price: <span className="price">${price}</span>
-        </h2>
-      </div>
+      <div className="crypto-card-container"></div>
     </Div>
   );
 };
 
 export default CryptoCard;
-
-// <img
-//   src={require(`./../../assets/crypto-logos/${name_id}-logo.svg`).default}
-//   alt=""
-//   style={{ transform: `scale(${scale})` }}
-// />

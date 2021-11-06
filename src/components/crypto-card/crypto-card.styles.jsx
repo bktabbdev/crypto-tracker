@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
-  height: 405px;
-  width: 270px;
-  margin: 2rem;
+  /* height: 405px; */
+  /* width: 270px; */
   display: grid;
   grid-template-rows: 135px 264px;
   border-radius: 10px;
@@ -15,8 +14,13 @@ export const Div = styled.div`
     width: 100%;
     font-size: 48px;
     position: relative;
-    border-bottom: 2px solid blue;
-    background: #a7cfe8;
+    /* border-bottom: 2px solid blue; */
+    background: linear-gradient(
+      115deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(55, 96, 191, 1) 12%,
+      rgba(83, 202, 226, 1) 100%
+    );
     border-radius: 10px 10px 0 0;
 
     &:first-child {
@@ -46,7 +50,12 @@ export const Div = styled.div`
   .crypto-data {
     padding-top: 16px;
     padding-left: 16px;
-    background: #a284ad;
+    background: linear-gradient(
+      25deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(55, 96, 191, 1) 25%,
+      rgba(83, 202, 226, 1) 100%
+    );
     border-radius: 0 0 10px 10px;
 
     .price {

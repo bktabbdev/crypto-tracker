@@ -1,6 +1,6 @@
 import React from 'react';
-
 import CardContainer from '../../components/card-container/card-container.component';
+import SectionOne from '../../components/section-one/section-one.component';
 import QueryBox from '../../components/query-box/query-box.component';
 
 import './HomePage.styles.css';
@@ -13,7 +13,7 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <QueryBox />
+      <SectionOne />
       <CardContainer numToRender={numCardsToRender} store={CRYPTO_DATA} />
     </div>
   );

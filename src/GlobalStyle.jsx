@@ -8,6 +8,15 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
 }
 
+.app {
+  position: relative;
+  background: linear-gradient(
+    201deg,
+    rgba(191, 55, 55, 1) 22%,
+    rgba(226, 83, 196, 1) 100%
+  );
+}
+
 
 
 html, body {
@@ -17,6 +26,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+
   }
 
 

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Div = styled.div`
   height: 144px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin: -12px;
   padding: 0 12px;

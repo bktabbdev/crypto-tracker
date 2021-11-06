@@ -4,7 +4,7 @@ export const Div = styled.div`
   background: #fff;
   border-radius: 25px;
   width: 80%;
-  height: 70%;
+  height: 70vh;
   box-shadow: 3px 3px #4a6dd9, -1em 0 0.4em #4a6dd9;
   z-index: 1;
   display: flex;
