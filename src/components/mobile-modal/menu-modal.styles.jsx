@@ -25,9 +25,11 @@ export const Div = styled.div`
 
   .title-row {
     display: flex;
+    padding-top: 1rem;
     grid-column-start: 1;
     grid-column-end: 3;
     justify-content: space-evenly;
+    align-items: flex-start;
 
     .title {
       font-weight: 500;
@@ -37,16 +39,50 @@ export const Div = styled.div`
         display: inline-block;
         position: relative;
       }
-      .active {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: blue;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 0;
+        height: 3px;
+        background: blue;
+      }
+
+      &.active {
         &:before {
           content: '';
           display: block;
           position: absolute;
-          bottom: -5px;
+          top: 18px;
           left: 0;
-          width: 100%;
-          height: 5px;
+          width: 50%;
+          height: 3px;
           background: blue;
+          transition: 0.5s;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 18px;
+          right: 0;
+          width: 50%;
+          height: 3px;
+          background: blue;
+          transition: 0.5s;
         }
       }
     }
