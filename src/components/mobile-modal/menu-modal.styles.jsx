@@ -1,41 +1,67 @@
 import styled, { keyframes } from 'styled-components';
 
-const setHeight = keyframes`
+const openDimensions = keyframes`
 0% {
+    width: 0;
     height: 0;
 } 100% {
-    height: 480px
+  width: 95vw
+    height: 480px;
 }
+`;
+
+const closeDimensions = keyframes`
+0% {
+  width: 95vw; 
+height: 480px
+} 100% {
+  width: 0; 
+  height: 0;
+  }
 `;
 
 export const Div = styled.div`
   position: fixed;
   top: 78px;
-  left: 2.5%;
-  width: 95vw;
-  height: 480px;
+  right: 2.5%;
   border-radius: 12px;
   background: white;
   overflow: scroll;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 2fr 2fr;
+  display: flex;
+  flex-direction: column;
   overflow-y: scroll;
-  animation: 1s ${setHeight} ease;
+
+  &.initial {
+    height: 0;
+    width: 0;
+  }
+
+  &.open {
+    animation: 1s ${openDimensions} ease;
+    width: 95vw;
+    height: 480px;
+  }
+
+  &.close {
+    animation: 1s ${closeDimensions} ease;
+    width: 0;
+    height: 0;
+  }
 
   .title-row {
     display: flex;
-    padding-top: 1rem;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    height: 3rem;
+    justify-content: flex-start;
 
     .title {
-      font-weight: 500;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 125%;
       position: relative;
       cursor: pointer;
-      p {
+
+      span {
         display: inline-block;
         position: relative;
       }
@@ -43,7 +69,7 @@ export const Div = styled.div`
         content: '';
         display: block;
         position: absolute;
-        top: 18px;
+        top: 24px;
         left: 0;
         width: 0;
         height: 3px;
@@ -53,7 +79,7 @@ export const Div = styled.div`
         content: '';
         display: block;
         position: absolute;
-        top: 18px;
+        top: 24px;
         right: 0;
         width: 0;
         height: 3px;
@@ -65,7 +91,7 @@ export const Div = styled.div`
           content: '';
           display: block;
           position: absolute;
-          top: 18px;
+          top: 36px;
           left: 0;
           width: 50%;
           height: 3px;
@@ -77,7 +103,7 @@ export const Div = styled.div`
           content: '';
           display: block;
           position: absolute;
-          top: 18px;
+          top: 36px;
           right: 0;
           width: 50%;
           height: 3px;
@@ -85,14 +111,6 @@ export const Div = styled.div`
           transition: 0.5s;
         }
       }
-    }
-  }
-
-  .content-row {
-    img {
-      height: 75%;
-      width: 75%;
-      margin: auto;
     }
   }
 `;

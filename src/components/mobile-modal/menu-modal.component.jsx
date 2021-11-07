@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import ProductContent from '../modal-content/performance-content.component';
 
 import { Div } from './menu-modal.styles';
 
@@ -27,33 +28,30 @@ const TitleComponent = ({ title, reset, starter }) => {
   );
 };
 
-const MobileMenuModal = () => {
+const MobileMenuModal = ({ open }) => {
   const [reset, setReset] = useState(false);
+  const [initialClick, setInitialClick] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(true);
 
-  const handleChange = (e) => {
-    console.log('CHANGE');
-  };
+  useEffect(() => {
+    if (!open) return;
+    if (!initialLoad) return;
+    setInitialLoad(!initialLoad);
+  });
 
   return (
-    <Div>
+    <Div className={initialLoad ? 'initial' : open ? 'open' : 'close'}>
       <div className="title-row">
-        <div>
-          <TitleComponent starter={true} reset={reset} title="Products" />
-        </div>
-        <div>
-          <TitleComponent starter={false} reset={reset} title="Performance" />
-        </div>
-        <div>
-          <TitleComponent starter={false} reset={reset} title="Pricing" />
-        </div>
-      </div>
-      <div className="content-row">
-        <img
-          className="row-img"
-          src={require('./../../assets/modal-img/rev.svg').default}
-          alt=""
+        <TitleComponent
+          className="a"
+          starter={true}
+          reset={reset}
+          title="Performance 📈"
         />
+        <TitleComponent starter={false} reset={reset} title="Products ☀️" />
+        <TitleComponent starter={false} reset={reset} title="Pricing 💰" />
       </div>
+      <ProductContent />
     </Div>
   );
 };

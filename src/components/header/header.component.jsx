@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <NavContainer>
       <div className="empty-toggle" style={{ display: 'none' }}></div>
-      {open ? <MobileMenuModal /> : null}
+      {open ? <MobileMenuModal open={open} /> : <MobileMenuModal open={open} />}
 
       <Span>
         <h1>Crypto</h1>{' '}

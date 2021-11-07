@@ -14,6 +14,5 @@ export const Div = styled.div`
   box-sizing: border-box;
 
   @media (max-width: 480px) {
-    background: yellow;
   }
 `;
