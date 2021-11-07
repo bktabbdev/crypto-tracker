@@ -15,7 +15,7 @@ const PerformanceContent = () => {
       <BackdropOval />
       <PerformanceFeatureOne>
         <span className="feature-title">
-          Seamless <br></br> Integration
+          <h3>Seamless Efficiency</h3>
         </span>
         <ul className="feature-content">
           <li className="feature-item">

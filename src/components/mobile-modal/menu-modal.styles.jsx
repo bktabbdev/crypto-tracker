@@ -112,5 +112,9 @@ export const Div = styled.div`
         }
       }
     }
+    @media (max-width: 365px) {
+      font-size: 85%;
+      justify-content: space-evenly;
+    }
   }
 `;

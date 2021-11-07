@@ -6,12 +6,6 @@ import { Div } from './menu-modal.styles';
 const TitleComponent = ({ title, reset, starter }) => {
   const [current, setCurrent] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [varStarter, setVarStarter] = useState(starter);
-
-  if (varStarter) {
-    setVarStarter(!varStarter);
-    setCurrent(!current);
-  }
 
   const handleClick = (e) => {
     setClicked(!clicked);
@@ -21,7 +15,9 @@ const TitleComponent = ({ title, reset, starter }) => {
   return (
     <span
       onClick={handleClick}
-      className={current && !reset ? 'title active' : 'title'}
+      className={
+        starter ? 'title active' : current && !reset ? 'title active' : 'title'
+      }
     >
       {title}
     </span>
@@ -30,14 +26,14 @@ const TitleComponent = ({ title, reset, starter }) => {
 
 const MobileMenuModal = ({ open }) => {
   const [reset, setReset] = useState(false);
-  const [initialClick, setInitialClick] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
     if (!open) return;
     if (!initialLoad) return;
     setInitialLoad(!initialLoad);
-  });
+    setReset(reset);
+  }, [initialLoad, open, reset]);
 
   return (
     <Div className={initialLoad ? 'initial' : open ? 'open' : 'close'}>

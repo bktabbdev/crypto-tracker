@@ -42,21 +42,25 @@ export const PerformanceFeatureOne = styled.span`
   position: absolute;
   left: 30%;
   width: 100%;
-  top: 10%;
+  top: 0%;
   margin: 0;
   padding: 0;
 
   .feature-title {
     font-weight: bold;
     font-size: 42px;
-    background: linear-gradient(
-      90deg,
-      rgba(59, 101, 242, 1) 0%,
-      rgba(95, 29, 253, 1) 31%,
-      rgba(252, 176, 69, 1) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+    h3 {
+      background: linear-gradient(
+        90deg,
+        rgba(59, 101, 242, 1) 0%,
+        rgba(95, 29, 253, 1) 31%,
+        rgba(252, 176, 69, 1) 80%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .feature-content {
@@ -65,7 +69,7 @@ export const PerformanceFeatureOne = styled.span`
 
     .feature-item {
       width: 100%;
-      transform: translateX(-25px);
+      transform: translateX(-75px);
       display: flex;
       flex-direction: column;
       font-size: 125%;
