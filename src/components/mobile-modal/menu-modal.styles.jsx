@@ -52,12 +52,13 @@ export const Div = styled.div`
     display: flex;
     height: 3rem;
     justify-content: flex-start;
+    list-style: none;
 
     .title {
       display: flex;
       align-items: center;
       font-weight: 700;
-      font-size: 125%;
+      font-size: 100%;
       position: relative;
       cursor: pointer;
 
@@ -69,20 +70,20 @@ export const Div = styled.div`
         content: '';
         display: block;
         position: absolute;
-        top: 24px;
+        top: 36px;
         left: 0;
         width: 0;
-        height: 3px;
+        height: 2px;
         background: blue;
       }
       &:after {
         content: '';
         display: block;
         position: absolute;
-        top: 24px;
+        top: 36px;
         right: 0;
         width: 0;
-        height: 3px;
+        height: 2px;
         background: blue;
       }
 
@@ -94,7 +95,6 @@ export const Div = styled.div`
           top: 36px;
           left: 0;
           width: 50%;
-          height: 3px;
           background: blue;
           transition: 0.5s;
         }
@@ -106,14 +106,13 @@ export const Div = styled.div`
           top: 36px;
           right: 0;
           width: 50%;
-          height: 3px;
           background: blue;
           transition: 0.5s;
         }
       }
     }
     @media (max-width: 365px) {
-      font-size: 85%;
+      font-size: 80%;
       justify-content: space-evenly;
     }
   }

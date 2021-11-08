@@ -9,9 +9,11 @@ import {
   RightArrow,
 } from './performance-content.styles';
 
-const PerformanceContent = () => {
+const ProductContentPerformance = ({ isHidden }) => {
+  console.log(isHidden);
+
   return (
-    <ModalPerformanceContainer>
+    <ModalPerformanceContainer className={isHidden ? 'hidden' : ''}>
       <BackdropOval />
       <PerformanceFeatureOne>
         <span className="feature-title">
@@ -62,4 +64,4 @@ const PerformanceContent = () => {
   );
 };
 
-export default PerformanceContent;
+export default ProductContentPerformance;

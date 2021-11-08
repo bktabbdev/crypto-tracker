@@ -14,6 +14,10 @@ export const ModalPerformanceContainer = styled.div`
   position: relative;
   z-index: -2;
   overflow: hidden;
+
+  &.hidden {
+    display: none;
+  }
 `;
 
 export const BackdropOval = styled.div`
