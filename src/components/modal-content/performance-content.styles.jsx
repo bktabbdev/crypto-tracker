@@ -1,7 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { FcCheckmark } from 'react-icons/fc';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { FaEthereum } from 'react-icons/fa';
+
+const translateLeft = keyframes`
+0% {
+  transform: translateX(0);
+} 100% {
+  transform: translateX(-100%);
+}
+`;
+
+const translateRight = keyframes`
+0% {
+  transform: translateX(-100%);
+} 100% {
+  transform: translateX(0);
+}`;
 
 export const ModalPerformanceContainer = styled.div`
   height: 100%;
@@ -14,9 +29,12 @@ export const ModalPerformanceContainer = styled.div`
   position: relative;
   z-index: -2;
   overflow: hidden;
+  animation: 1s ${translateRight};
 
   &.hidden {
-    display: none;
+    /* display: none; */
+    animation: 1s ${translateLeft} ease;
+    transform: translateX(-100%);
   }
 `;
 

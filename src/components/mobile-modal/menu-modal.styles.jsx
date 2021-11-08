@@ -37,13 +37,13 @@ export const Div = styled.div`
   }
 
   &.open {
-    animation: 1s ${openDimensions} ease;
+    animation: 0.8s ${openDimensions} ease;
     width: 95vw;
     height: 480px;
   }
 
   &.close {
-    animation: 1s ${closeDimensions} ease;
+    animation: 0.8s ${closeDimensions} ease;
     width: 0;
     height: 0;
   }
@@ -51,7 +51,7 @@ export const Div = styled.div`
   .title-row {
     display: flex;
     height: 3rem;
-    justify-content: flex-start;
+    justify-content: space-around;
     list-style: none;
 
     .title {
