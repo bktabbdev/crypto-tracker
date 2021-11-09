@@ -11,9 +11,10 @@ import {
 
 const ProductContentPerformance = ({ isHidden }) => {
   console.log(isHidden);
+  console.log('hello');
 
   return (
-    <ModalPerformanceContainer className={isHidden ? 'hidden' : ''}>
+    <ModalPerformanceContainer className={isHidden}>
       <BackdropOval />
       <PerformanceFeatureOne>
         <span className="feature-title">
@@ -34,7 +35,7 @@ const ProductContentPerformance = ({ isHidden }) => {
           <li className="feature-item">
             <div className="feature-item-title__container">
               <Checkmark />
-              <h3>Market Focused</h3>
+              <h3>Market Responsive</h3>
             </div>
             <div className="learn">
               <span>
@@ -55,11 +56,10 @@ const ProductContentPerformance = ({ isHidden }) => {
           </li>
         </ul>
       </PerformanceFeatureOne>
-      <div></div>
       <PerformanceImageOne
-        src={require('./../../assets/modal-img/rev.svg').default}
+        src={require('./../../../assets/modal-img/rev.svg').default}
         alt=""
-      />
+      />{' '}
     </ModalPerformanceContainer>
   );
 };

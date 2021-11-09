@@ -26,10 +26,28 @@ export const Div = styled.div`
   right: 2.5%;
   border-radius: 12px;
   background: white;
-  overflow: scroll;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+
+  .product-one {
+    transform: translateX(0);
+    transition: 1s;
+  }
+
+  .product-two {
+    transform: translateX(-25%);
+    transition: 1s;
+  }
+
+  .product-three {
+    transform: translateX(-50%);
+    transition: 1s;
+  }
+
+  .quarter-gap {
+    width: 100%;
+  }
 
   &.initial {
     height: 0;
@@ -50,7 +68,7 @@ export const Div = styled.div`
 
   .title-row {
     display: flex;
-    height: 3rem;
+    height: 48px;
     justify-content: space-around;
     list-style: none;
 
@@ -114,6 +132,15 @@ export const Div = styled.div`
     @media (max-width: 365px) {
       font-size: 80%;
       justify-content: space-evenly;
+    }
+  }
+
+  .product-container {
+    width: 400%;
+    display: flex;
+
+    .point-five {
+      width: 0.5%;
     }
   }
 `;

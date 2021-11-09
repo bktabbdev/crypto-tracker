@@ -1,9 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 import { FcCheckmark } from 'react-icons/fc';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import { FaEthereum } from 'react-icons/fa';
+// import { FaEthereum } from 'react-icons/fa';
 
-const translateLeft = keyframes`
+const translateLeftOne = keyframes`
 0% {
   transform: translateX(0);
 } 100% {
@@ -11,9 +11,24 @@ const translateLeft = keyframes`
 }
 `;
 
-const translateRight = keyframes`
+const translateRightOne = keyframes`
 0% {
   transform: translateX(-100%);
+} 100% {
+  transform: translateX(0);
+}`;
+
+const translateLeftTwo = keyframes`
+0% {
+  transform: translateX(0);
+} 100% {
+  transform: translateX(-200%);
+}
+`;
+
+const translateRightTwo = keyframes`
+0% {
+  transform: translateX(-200%);
 } 100% {
   transform: translateX(0);
 }`;
@@ -29,24 +44,18 @@ export const ModalPerformanceContainer = styled.div`
   position: relative;
   z-index: -2;
   overflow: hidden;
-  animation: 1s ${translateRight};
-
-  &.hidden {
-    /* display: none; */
-    animation: 1s ${translateLeft} ease;
-    transform: translateX(-100%);
-  }
+  animation: 1s ${translateRightOne};
 `;
 
 export const BackdropOval = styled.div`
   position: absolute;
-  top: 25px;
-  left: 48px;
+  top: 40px;
+  left: 36px;
   transform: rotate(30deg);
   opacity: 0.8;
   z-index: -1;
-  height: 60%;
-  width: 60%;
+  height: 65%;
+  width: 65%;
   border-radius: 50%;
   background: #fff;
 `;

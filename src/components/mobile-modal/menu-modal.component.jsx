@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ProductContentPerformance from '../modal-content/performance-content.component';
+import ProductContentPerformance from '../modal-content/performance-content/performance-content.component';
+import ProductContentCompliance from '../modal-content/compliance-content/compliance-content.component';
+import ProductContentPricing from '../modal-content/pricing-content/pricing-content.component';
 
 import { Div } from './menu-modal.styles';
 
@@ -11,8 +13,6 @@ const MobileMenuModal = ({ open }) => {
   const [currentTab, setCurrentTab] = useState('tab1');
   const [currentProduct, setCurrentProduct] = useState('product1');
   const [initialLoad, setInitialLoad] = useState(true);
-
-  console.log('MobileModalMenu');
 
   useEffect(() => {
     if (!open) return;
@@ -38,8 +38,6 @@ const MobileMenuModal = ({ open }) => {
     setCurrentProduct('product3');
   };
 
-  console.log(currentTab);
-
   return (
     <Div className={initialLoad ? 'initial' : open ? 'open' : 'close'}>
       <ul className="title-row">
@@ -47,13 +45,13 @@ const MobileMenuModal = ({ open }) => {
           className={currentTab === 'tab1' ? 'active title' : 'title'}
           onClick={setTabOne}
         >
-          <TitleComponent title="Performance 📈" />
+          <TitleComponent title="Compliance ☀️" />
         </li>
         <li
           className={currentTab === 'tab2' ? 'active title' : 'title'}
           onClick={setTabTwo}
         >
-          <TitleComponent title="Products ☀️" />
+          <TitleComponent title="Performance 📈" />
         </li>
         <li
           className={currentTab === 'tab3' ? 'active title' : 'title'}
@@ -62,9 +60,23 @@ const MobileMenuModal = ({ open }) => {
           <TitleComponent title="Pricing 💰" />
         </li>
       </ul>
-      <ProductContentPerformance
-        isHidden={currentProduct !== 'product1' ? 'hidden' : ''}
-      />
+      <div
+        className={
+          currentProduct === 'product1'
+            ? 'product-one product-container'
+            : currentProduct === 'product2'
+            ? 'product-two product-container'
+            : currentProduct === 'product3'
+            ? 'product-three product-container'
+            : 'product-container'
+        }
+        style={{ height: '100%' }}
+      >
+        <ProductContentCompliance />
+        <ProductContentPerformance />
+        <ProductContentPricing />
+        <div className="quarter-gap"></div>
+      </div>
     </Div>
   );
 };
