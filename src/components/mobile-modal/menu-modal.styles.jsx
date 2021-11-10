@@ -130,7 +130,7 @@ export const Div = styled.div`
       }
     }
     @media (max-width: 365px) {
-      font-size: 80%;
+      font-size: 75%;
       justify-content: space-evenly;
     }
   }

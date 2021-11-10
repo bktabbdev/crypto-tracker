@@ -3,6 +3,7 @@ import React from 'react';
 import {
   ModalPerformanceContainer,
   BackdropOval,
+  BackdropOvalTwo,
   PerformanceImageOne,
   PerformanceFeatureOne,
   Checkmark,
@@ -16,6 +17,7 @@ const ProductContentPerformance = ({ isHidden }) => {
   return (
     <ModalPerformanceContainer className={isHidden}>
       <BackdropOval />
+      <BackdropOvalTwo />
       <PerformanceFeatureOne>
         <span className="feature-title">
           <h3>Seamless Efficiency</h3>
@@ -24,7 +26,7 @@ const ProductContentPerformance = ({ isHidden }) => {
           <li className="feature-item">
             <div className="feature-item-title__container">
               <Checkmark />
-              <h3>Blockchain Integration</h3>
+              <h3>Blockchain Proficiency</h3>
             </div>
             <div className="learn">
               <span>
@@ -36,6 +38,17 @@ const ProductContentPerformance = ({ isHidden }) => {
             <div className="feature-item-title__container">
               <Checkmark />
               <h3>API/SDK Driven</h3>
+            </div>
+            <div className="learn">
+              <span>
+                Learn More <RightArrow className="right-arrow" />
+              </span>
+            </div>
+          </li>
+          <li className="feature-item">
+            <div className="feature-item-title__container">
+              <Checkmark />
+              <h3>Smart Contracts</h3>
             </div>
             <div className="learn">
               <span>

@@ -48,6 +48,8 @@ export const GridWrapper = styled.div`
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
   padding-top: 1rem;
+  height: 100%;
+  width: 100%;
 `;
 
 export const RocketImage = styled.img`
@@ -65,7 +67,7 @@ export const BeginBox = styled.div`
   margin: 0 0.5rem;
   color: #fff;
   position: relative;
-  grid-row: 1 / 4;
+  grid-row: 1 / 3;
   grid-column: 1 / 5;
 `;
 

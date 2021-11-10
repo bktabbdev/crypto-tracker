@@ -36,12 +36,12 @@ const translateRightTwo = keyframes`
 export const ModalPerformanceContainer = styled.div`
   height: 100%;
   width: 100%;
-  background: rgb(58, 164, 176);
+  /* background: rgb(58, 164, 176);
   background: radial-gradient(
     circle,
     rgba(58, 164, 176, 1) 0%,
     rgba(23, 30, 189, 1) 69%
-  );
+  ); */
   position: relative;
   z-index: -2;
   overflow: hidden;
@@ -50,15 +50,26 @@ export const ModalPerformanceContainer = styled.div`
 
 export const BackdropOval = styled.div`
   position: absolute;
-  top: 40px;
+  top: -70px;
   left: 36px;
-  transform: rotate(30deg);
-  opacity: 0.4;
+  background: blue;
+  opacity: 0.3;
   z-index: -1;
-  height: 65%;
-  width: 65%;
+  height: 50%;
+  width: 150%;
   border-radius: 50%;
-  background: #fff;
+`;
+
+export const BackdropOvalTwo = styled.div`
+  position: absolute;
+  top: 45%;
+  left: -30%;
+  background: blue;
+  opacity: 0.3;
+  z-index: -1;
+  height: 40%;
+  width: 120%;
+  border-radius: 50%;
 `;
 
 export const PerformanceImageOne = styled.img`
@@ -119,7 +130,7 @@ export const PerformanceFeatureOne = styled.span`
           display: flex;
           align-items: center;
           cursor: pointer;
-          color: #fff;
+          color: blue;
           font-size: 125%;
 
           &:hover {

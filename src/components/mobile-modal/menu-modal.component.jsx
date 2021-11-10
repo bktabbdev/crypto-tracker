@@ -57,7 +57,7 @@ const MobileMenuModal = ({ open }) => {
           className={currentTab === 'tab3' ? 'active title' : 'title'}
           onClick={setTabThree}
         >
-          <TitleComponent title="Consultation 🤷🏽" />
+          <TitleComponent title="Inquiry 🤷🏽" />
         </li>
       </ul>
       <div
