@@ -17,14 +17,14 @@ const Header = () => {
       {open ? <MobileMenuModal open={open} /> : <MobileMenuModal open={open} />}
 
       <Span>
-        <h1>Crypto</h1>{' '}
+        <h1>Cubic</h1>{' '}
         <h1>
           C
           <img
             src={require('./../../assets/crypto-logos/btc-logo.svg').default}
             alt=""
           />
-          mmerce
+          mpliance
         </h1>
       </Span>
       <NavLinkContainer>

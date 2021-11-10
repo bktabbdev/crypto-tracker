@@ -36,10 +36,16 @@ const translateRightTwo = keyframes`
 export const ModalPerformanceContainer = styled.div`
   height: 100%;
   width: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(49, 136, 231, 1) 22%,
     rgba(83, 155, 226, 1) 100%
+  ); */
+  background: rgb(82, 244, 88);
+  background: linear-gradient(
+    90deg,
+    rgba(82, 244, 88, 1) 0%,
+    rgba(68, 241, 164, 1) 82%
   );
   position: relative;
   z-index: -2;
@@ -86,7 +92,7 @@ export const PerformanceFeatureOne = styled.span`
         90deg,
         rgba(59, 101, 242, 1) 0%,
         rgba(95, 29, 253, 1) 31%,
-        rgba(252, 176, 69, 1) 80%
+        rgba(252, 176, 69, 1) 60%
       );
       background-clip: text;
       -webkit-background-clip: text;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductContentPerformance from '../modal-content/performance-content/performance-content.component';
 import ProductContentCompliance from '../modal-content/compliance-content/compliance-content.component';
-import ProductContentPricing from '../modal-content/pricing-content/pricing-content.component';
+import ProductContentConsultation from '../modal-content/consultation/consultation-content.component';
 
 import { Div } from './menu-modal.styles';
 
@@ -57,7 +57,7 @@ const MobileMenuModal = ({ open }) => {
           className={currentTab === 'tab3' ? 'active title' : 'title'}
           onClick={setTabThree}
         >
-          <TitleComponent title="Pricing 💰" />
+          <TitleComponent title="Consultation 🤷🏽" />
         </li>
       </ul>
       <div
@@ -74,7 +74,7 @@ const MobileMenuModal = ({ open }) => {
       >
         <ProductContentCompliance />
         <ProductContentPerformance />
-        <ProductContentPricing />
+        <ProductContentConsultation />
         <div className="quarter-gap"></div>
       </div>
     </Div>

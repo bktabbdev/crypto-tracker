@@ -24,7 +24,7 @@ const ProductContentPerformance = ({ isHidden }) => {
           <li className="feature-item">
             <div className="feature-item-title__container">
               <Checkmark />
-              <h3>Blockchain Compatible</h3>
+              <h3>Blockchain Integration</h3>
             </div>
             <div className="learn">
               <span>
@@ -35,7 +35,7 @@ const ProductContentPerformance = ({ isHidden }) => {
           <li className="feature-item">
             <div className="feature-item-title__container">
               <Checkmark />
-              <h3>Market Responsive</h3>
+              <h3>API/SDK Driven</h3>
             </div>
             <div className="learn">
               <span>

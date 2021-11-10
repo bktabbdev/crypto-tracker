@@ -55,13 +55,12 @@ const ProductContentCompliance = () => {
             <GridInfo>
               <h3>Annual Validation</h3>
               <ul>
-                <li>Annual Diagnostic run by veteran PCI auditors</li>
+                <li>Annual diagnostic run by veteran PCI auditors</li>
               </ul>
             </GridInfo>
           </FlexRow>
         </div>
       </PciContainer>
-
       <BackDropOvalOne />
       <BackDropOvalTwo />
     </ModalComplianceContainer>

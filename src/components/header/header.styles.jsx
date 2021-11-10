@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const NavContainer = styled.nav`
-  background: rgba(18, 7, 77);
+  /* background: rgba(18, 7, 77); */
+  background: #171ebd;
   width: 100%;
   display: flex;
   height: 96px;
