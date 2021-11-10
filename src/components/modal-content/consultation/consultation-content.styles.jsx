@@ -10,6 +10,29 @@ export const ModalConsultationContainer = styled.div`
     rgba(70, 77, 252, 1) 69%
   );
   position: relative;
+  overflow: hidden;
+
+  .input-flex {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .bs-icon {
+      transform: translateX(-15px);
+      color: blue;
+      height: 25px;
+      width: 25px;
+
+      &:hover {
+        color: peru;
+        cursor: pointer;
+      }
+    }
+  }
 `;
 
 export const AbsoluteWrapper = styled.div`
@@ -46,11 +69,38 @@ export const BeginBox = styled.div`
   grid-column: 1 / 5;
 `;
 
+export const InputBox = styled.input`
+  z-index: 10;
+  width: 225px;
+  border: 2px solid orange;
+  height: 50px;
+  font-size: 100%;
+  border-radius: 25px;
+  padding-left: 15px;
+  box-shadow: 1px 1px 11px 0px #aa8c40;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
 export const BackgroundOval = styled.div`
   position: absolute;
-  top: 50%;
-  height: 50%;
+  top: 40%;
+  height: 60%;
   width: 50%;
+  border-radius: 50%;
+  transform: rotate(90deg);
   background: white;
-  z-index: -2;
+`;
+
+export const BackgroundOvalTwo = styled.div`
+  position: absolute;
+  top: 30%;
+  right: 0;
+  height: 60%;
+  width: 50%;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  background: white;
 `;

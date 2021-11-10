@@ -36,16 +36,11 @@ const translateRightTwo = keyframes`
 export const ModalPerformanceContainer = styled.div`
   height: 100%;
   width: 100%;
-  /* background: linear-gradient(
-    135deg,
-    rgba(49, 136, 231, 1) 22%,
-    rgba(83, 155, 226, 1) 100%
-  ); */
-  background: rgb(82, 244, 88);
-  background: linear-gradient(
-    90deg,
-    rgba(82, 244, 88, 1) 0%,
-    rgba(68, 241, 164, 1) 82%
+  background: rgb(58, 164, 176);
+  background: radial-gradient(
+    circle,
+    rgba(58, 164, 176, 1) 0%,
+    rgba(23, 30, 189, 1) 69%
   );
   position: relative;
   z-index: -2;
@@ -58,7 +53,7 @@ export const BackdropOval = styled.div`
   top: 40px;
   left: 36px;
   transform: rotate(30deg);
-  opacity: 0.8;
+  opacity: 0.4;
   z-index: -1;
   height: 65%;
   width: 65%;
@@ -124,7 +119,7 @@ export const PerformanceFeatureOne = styled.span`
           display: flex;
           align-items: center;
           cursor: pointer;
-          color: blue;
+          color: #fff;
           font-size: 125%;
 
           &:hover {

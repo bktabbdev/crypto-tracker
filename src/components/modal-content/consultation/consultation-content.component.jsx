@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { BsArrowRightSquare } from 'react-icons/bs';
+
 import {
   ModalConsultationContainer,
   RocketImage,
@@ -6,6 +9,8 @@ import {
   GridWrapper,
   BeginBox,
   BackgroundOval,
+  BackgroundOvalTwo,
+  InputBox,
 } from './consultation-content.styles';
 
 const ProductContentConsultation = () => {
@@ -22,9 +27,18 @@ const ProductContentConsultation = () => {
             src={require('./../../../assets/modal-img/rocket-ship.svg').default}
             atr=""
           />
+          <div className="input-flex">
+            <InputBox
+              name="email"
+              type="email"
+              placeholder="Enter Your Email"
+            />
+            <BsArrowRightSquare className="bs-icon" />
+          </div>
         </GridWrapper>
       </AbsoluteWrapper>
       <BackgroundOval />
+      <BackgroundOvalTwo />
     </ModalConsultationContainer>
   );
 };
